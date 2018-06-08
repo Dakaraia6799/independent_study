@@ -1,0 +1,109 @@
+<h1 style="text-align:center;"> Basic Tutorial of GrepSedAwk </h1>
+<body>
+<h3 style= "text-align:center;">What is shell scripting?</h3>
+<p>A shell script is a computer program that is runned through the unix shell.
+Functions that can be performed by shell scripts are; file manipulation,
+printing text, and program execution. In shell script there is something called "scripting langauge";
+Which is a programming language that supports scripts: programs written for a special environment that automates a execution of tasks that could alternatively be executed one-by-one by a human.
+A shell script can provide a variation of a system command where  command options, or post-processing apply automatically, this allows the new script to still act as a fully normal Unix command.
+One of such scripting languages is <b>GrepSedAwk</b>, which is what I will be trying to teach you how to use these commands. 
+</p>
+</body>
+<h3 style="text-align:center;"> Grep </h3>
+
+<p>The <b>Grep</b> in "GrepSedAwk" stands for (<b>G</b>lobally search a <b>R</b>egular <b>E</b>xpression and <b>P</b>rint), this section discusses GREP.
+
+</p>
+<h4 style="text-align:center;">Basic Commands
+</h4>
+<p> In grep some of the most basic commands anyone can use and understand are:
+<br>
+
+- `grep -e` ~ is a command that tells computer to initiate the grep program with extended regular expressions;
+which means, 
+- `grep -i` ~ the `grep -i` command tells the computer to run the grep program and forces grep to not allow the capitalization to matter when looking for expressions;
+which means, 
+- `grep -v` ~ tells the program to return all the expressions that are listed that <b>do not</b> match the expression you typed in.
+- `grep -w` ~ this command only selects only the matches that are whole words.
+- `grep -c` ~ is a command that prints a count of lines that match the expression that was typed.
+A cool thing about the `grep -c` function is that, it can also be combined with the `grep -v` function to print a count of the lines that dont match.
+- `grep -l` ~ the `grep -l` command prints the name of every file that contains the expression you sent the program to look for.
+- `grep -n` ~ prints the line number before each of the lines that matches the expression typed into the program.
+- `grep -r` ~ the `grep -r`command reads all given files in all directories ad sub dierectories
+
+<h3 style= "text-align:center;">Importance of Grep</h3>
+<b>Grep</b> is a command used to search plain lines of code for expressions that was given to the program to search for.
+Its name comes from the ed command g/re/p (globally search a regular expression and print), which has the same effect: doing a global search with the regular expression and printing all matching lines.
+Originally Grep's creator <i>Ken Thompson</i> intended for grep to be used for linux but, was later developed to be usable for all systems similar to linux.
+
+<h3 style="text-align:center;"> Sed 
+</h3>
+<p>The <b>Sed</b> in "GrepSedAwk" stands for (<b>S</b>tream <b>E</b>ditor), this section discusses SED.
+<h4 style="text-align:center;">Basic Commands
+</h4>
+
+- `c` ~ the "c" command stands for change and when it's used it is to replace the line you are currently on with a new line.
+- `=` ~ the "=" command prints the you are currently on.
+- `r` ~ the "r *filename*" command reads the file 
+- `i` ~ the "i" command inserts a new line before the oeiginal line 
+- `d` ~ stands for delete, goes in front of the command that deals with removing stuff, whether it be lines or words.
+- `a` ~ stands for ammend, allows for words and phrases to be added after a sentence or a line of code.
+
+<h3 style= "text-align:center;">Importance of Sed</h3>
+<b>Sed</b> is a Unix utility that parses and transforms text, using a simple, compact programming language.
+Sed was developed from 1973 to 1974 by Lee E. McMahon of Bell Labs, and is available today for most operating systems.
+Sed allows one to change and edit the context and outputs of certain files without having to open any of those files.
+</p>
+<h3 style="text-align:center;"> Awk 
+</h3>
+
+<p>The <b>Awk</b> in "GrepSedAwk" stands for (<b>A</b>ho, <b>W</b>einberger and <b>K</b>ernighan), this section discusses AWK.
+In Awk 
+There are three variations of <b>AWK</b>:
+
+- AWK~ the original from AT&T
+- NAWK~ A newer, improved version from AT&T
+- GAWK~ The Free Software foundation's version
+<br>
+
+
+<br> AWK can be used for simple calculations; If you wanted to calculate without reading any lines for input,
+you could use the `BEGIN` keyword, combined with a `exit` command:
+<br>
+<br>
+`BEGIN {`
+<br>	`i=1;`
+<br>	`while (i <= 10) {`
+<br>		`print "The square of ", i, " is ", i*i;`
+<br>		`i = i+1;`
+<br>	`}`
+<br>	`for (i=1; i <= 10; i++) {`
+<br>	`print "The square of ", i, " is ", i*i;`
+<br>	`}`
+<br>`exit;`
+<br> `}`
+<h3 style= "text-align:center;">Awk Commands</h3>
+
+- `~` this symbol means that the the expression matches what it was being compaired too.
+- When `~` has an `!` in front like `!~` this means that the expression doesn't match its comparison
+- `+` this symbol does addition when it is paired between two or more numbers.
+- `-` this symbol does subtraction when it is paired between two or more numbers.
+- `*` this symbol does multiplication when it is paired between two or more numbers.
+- `/` this symbol does division when it is paired between two or more numbers.
+- `%` this symbol does modulo when it is paired between two or more numbers. 
+- ` ` When a space is placed it concatenates two strings to combine them together.
+
+
+<h3 style= "text-align:center;">Importance of Awk</h3>
+<b>Awk</b> is an excellent filter and report writer. 
+Many UNIX utilities generates rows and columns of information. 
+AWK is good for processing these rows and columns, 
+and it is easier to use AWK than most programming languages.
+AWK does not only have string manipulation functions, so it can search for particular strings and modify its output, 
+but also has associative arrays, which is something most computing languages are lacking.
+Awk programs follow the form `pattern {action}`,
+two important patterns are specified by the keywords "BEGIN" and "END".
+
+
+</p>
+
